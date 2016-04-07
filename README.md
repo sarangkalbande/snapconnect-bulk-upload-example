@@ -1,5 +1,3 @@
-(c) Copyright 2014-2015 Synapse Wireless, Inc.
-
 # SNAPconnect Example - Bulk Uploader
 
 ## Running This Example
@@ -125,12 +123,14 @@ python bulkUpload.py -c 0 -z 10.84.5.80 -j 03FF01
 ## Notes
 
 ### Stopping the program during execution
+
 If you kill the program during operation the SNAP bridge of remote 
 connection will remain on the last Channel/NID combination associated 
 with the halted bulkupload process. Simply reboot the module or run 
 another bulkupload that runs to completion.
 
 ### Channel Order
+
 The system is designed to begin with the most commonly used channels 
 rather than blindly beginning on channel 0 each time. Once a node is 
 discovered, the corresponding channel will be placed at the beginning of 
@@ -138,22 +138,25 @@ the list. This cuts down on the time finding devices clustered
 together on the same groups of channels.
 
 ### Remote Connection
+
 It is important you specify the SNAP address of the RF bridge to be used
 for the remote connection (future version might avoid this). You will 
 not receive an error if you attempt a connection to an IP address not 
 associated with a valid SNAP Connect instance.
 
 ### Output files
+
 The result files (ex. Result_resp.txt) will be overwritten with the 
-results of each bulkupload process that runs to completion (ie. save the
+results of each bulk-upload process that runs to completion (ie. save the
 file with a different filename if you wish to save the list.)
 
 ### Large Networks
+
 Increase the timeout (-t) if you have a large network and want to allow
 more time for the node to respond.
 
 ## License
 
-Copyright © 2016 [Synapse Wireless](http://www.synapse-wireless.com/), licensed under the [Apache License v2.0](LICENSE.md).
+Copyright Â© 2016 [Synapse Wireless](http://www.synapse-wireless.com/), licensed under the [Apache License v2.0](LICENSE.md).
 
-<!-- meta-tags: vvv-snapconnect, vvv-wx, vvv-gui,vvv-python, vvv-example -->
+<!-- meta-tags: vvv-snapconnect, vvv-python, vvv-example -->
