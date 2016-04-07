@@ -1,12 +1,12 @@
 # SNAPconnect Example - Bulk Uploader
 
-## Running This Example
-
 The bulkUpload script can be used to perform operations on large lists 
 of SNAP nodes.  The tool has the ability to scan multiple channels and 
 Network IDs to locate nodes, and after finding nodes can disable 
 multicast forwarding, change the channel and network ID, and upload SPY 
 files to the nodes.
+
+## Running This Example
 
 ### MAC file format
 
