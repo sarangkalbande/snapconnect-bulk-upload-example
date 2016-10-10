@@ -15,7 +15,7 @@ Command line options:
 -r  Retry RPCs
 -t  Timeout per RPC
 -z  Connect to a remote network
--j  Bridge Address (required for remote conn using -z)
+-j  Bridge address (required for remote conn using -z)
 """
 
 import binascii
@@ -466,7 +466,7 @@ if __name__ == "__main__":
 
             parser = optparse.OptionParser()
 
-            parser.add_option("-e", "--encryption", dest="encrypt", help="Enable encrytion", default=0)
+            parser.add_option("-e", "--encryption", dest="encrypt", help="Enable encryption", default=0)
             parser.add_option("-k", "--encryptionKey", dest="encryption_key", help="Key for encryption", default='')
             parser.add_option("-m", "--macfile", dest="macfile", help="Mac list (def MacList.txt)", default='MacList.txt')
             parser.add_option("-s", "--spyfile", dest="spyfile", help="SPY file", default='')
@@ -550,7 +550,7 @@ if __name__ == "__main__":
                 self.comm.set_hook(snap.hooks.HOOK_SNAPCOM_OPENED, callback=self.Snapcom_Opened)
                 self.comm.set_hook(snap.hooks.HOOK_SNAPCOM_CLOSED, callback=self.Snapcom_Closed)
 
-                # Now check that the user specified an bridge address and it is valid (AA.BB.CC or AABBCC)
+                # Now check that the user specified a bridge address and it is valid (AA.BB.CC or AABBCC)
                 if len(options.remoteBrAddr) == 6: #AABBCC
                     bridge_mac = binascii.unhexlify(options.remoteBrAddr)
                     print #DEBUG
